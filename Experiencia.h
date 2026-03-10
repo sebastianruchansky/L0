@@ -1,6 +1,5 @@
 #include <string>
 
-
 class Experiencia
 {
 public:
