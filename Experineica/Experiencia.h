@@ -1,6 +1,6 @@
 #include <string>
 #include "Data/DTFecha.h"
-
+#include "Data/DTExperiencia.h"
 
 class Experiencia
 {
@@ -10,16 +10,16 @@ public:
 
     // Variables privadas y funciones
 private:
-    std::string CodigoReserva;
+    std::string codigoReserva;
     std::string descripcion;
     int precioBase;
     DTFecha fecha;
-
+    std::set<Turista*> colTuristas;
 
     // Getters y Setters
 public:
-    std::string getCodigoReserva() { return CodigoReserva; }
-    
+    std::string getCodigoReserva() { return codigoReserva; }
+    DTExpe getExperiencia();
     virtual float calcularCosto() = 0;
 };
 
